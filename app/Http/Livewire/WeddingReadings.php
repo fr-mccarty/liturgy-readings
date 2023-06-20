@@ -4,7 +4,7 @@ namespace App\Http\Livewire;
 
 use Livewire\Component;
 
-class Reading extends Component
+class WeddingReadings extends Component
 {
     public $liturgy;
 
@@ -41,6 +41,7 @@ class Reading extends Component
 
     public function render()
     {
-        return view('livewire.reading', ['readings' => \App\Helpers\ReadingHelper::getReadings()])->extends('layouts.guest-with-navigation');
+        return view('livewire.wedding-readings', ['readings' => \App\Helpers\ReadingHelper::getReadings()])->extends('layouts.guest-with-navigation');
     }
+
 }

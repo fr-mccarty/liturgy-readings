@@ -3,7 +3,11 @@
 {{--        {{ __('Dashboard') }}--}}
 {{--    </x-responsive-nav-link>--}}
 
-    <x-responsive-nav-link href="{{ route('wedding') }}" :active="request()->routeIs('wedding')">
+    <x-responsive-nav-link href="{{ route('wedding-readings') }}" :active="request()->routeIs('wedding-readings')">
         Wedding Readings
+    </x-responsive-nav-link>
+
+    <x-responsive-nav-link href="{{ route('funeral-readings') }}" :active="request()->routeIs('funeral-readings')">
+        Funeral Readings
     </x-responsive-nav-link>
 </div>

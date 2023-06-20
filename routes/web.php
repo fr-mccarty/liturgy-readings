@@ -13,10 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', \App\Http\Livewire\Reading::class);
-Route::get('/dashboard', \App\Http\Livewire\Reading::class)->name('dashboard');
-Route::get('wedding-readings', \App\Http\Livewire\Reading::class)->name('wedding');
+Route::get('/', \App\Http\Livewire\WeddingReadings::class);
+Route::get('/dashboard', \App\Http\Livewire\WeddingReadings::class)->name('dashboard');
+Route::get('wedding-readings', \App\Http\Livewire\WeddingReadings::class)->name('wedding-readings');
 Route::get('wedding/print', \App\Http\Livewire\PrintWedding::class);
+Route::get('funeral-readings', \App\Http\Livewire\FuneralReadings::class)->name('funeral-readings');
+Route::get('funeral/print', \App\Http\Livewire\PrintFuneral::class);
 
 //Route::middleware([
 //    'auth:sanctum',

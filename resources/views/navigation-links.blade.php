@@ -3,7 +3,11 @@
 {{--        {{ __('Dashboard') }}--}}
 {{--    </x-nav-link>--}}
 
-    <x-nav-link href="{{ route('wedding') }}" :active="request()->routeIs('wedding')">
+    <x-nav-link href="{{ route('wedding-readings') }}" :active="request()->routeIs('wedding-readings')">
         Wedding Readings
+    </x-nav-link>
+
+    <x-nav-link href="{{ route('funeral-readings') }}" :active="request()->routeIs('funeral-readings')">
+        Funeral Readings
     </x-nav-link>
 </div>
