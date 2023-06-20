@@ -19,7 +19,7 @@
             <div class="col-span-6 sm:col-span-4">
                 <x-label>First Reading</x-label>
                 <x-input.select class="mt-1" wire:model.lazy="liturgy.1ReadingId">
-                    <option value="">Select a Value</option>
+                    <option value="">Select a Reading</option>
                     @foreach($readings->where('category', 'marriage-1')->where('translation_id', '1') as $reading)
                         <option value="{{$reading['id']}}">{{$reading['pericope']}}</option>
                     @endforeach
@@ -54,7 +54,7 @@
             <div class="col-span-6 sm:col-span-4">
                 <x-label>Psalm</x-label>
                 <x-input.select class="mt-1" wire:model.lazy="liturgy.PsalmReadingId">
-                    <option value="">Select a Value</option>
+                    <option value="">Select a Reading</option>
                     @foreach($readings->where('category', 'marriage-psalm')->where('translation_id', '1') as $reading)
                         <option value="{{$reading['id']}}">{{$reading['pericope']}}</option>
                     @endforeach
@@ -89,7 +89,7 @@
             <div class="col-span-6 sm:col-span-4">
                 <x-label>Second Reading</x-label>
                 <x-input.select class="mt-1" wire:model.lazy="liturgy.2ReadingId">
-                    <option value="">Select a Value</option>
+                    <option value="">Select a Reading</option>
                     @foreach($readings->where('category', 'marriage-2')->where('translation_id', '1') as $reading)
                         <option value="{{$reading['id']}}">{{$reading['pericope']}}</option>
                     @endforeach
@@ -124,7 +124,7 @@
             <div class="col-span-6 sm:col-span-4">
                 <x-label>Gospel Reading</x-label>
                 <x-input.select class="mt-1" wire:model.lazy="liturgy.GospelReadingId">
-                    <option value="">Select a Value</option>
+                    <option value="">Select a Reading</option>
                     @foreach($readings->where('category', 'marriage-gospel')->where('translation_id', '1') as $reading)
                         <option value="{{$reading['id']}}">{{$reading['pericope']}}</option>
                     @endforeach
