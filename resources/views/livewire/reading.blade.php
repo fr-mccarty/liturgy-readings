@@ -10,7 +10,6 @@
         </div>
     </div>
 
-
     <x-form-section submit="save">
         <x-slot name="title">
             First Reading
@@ -22,9 +21,12 @@
                 <x-input.select class="mt-1" wire:model.lazy="liturgy.1ReadingId">
                     <option value="">Select a Value</option>
                     @foreach($readings->where('category', 'marriage-1')->where('translation_id', '1') as $reading)
-                    <option value="{{$reading['id']}}">{{$reading['pericope']}}</option>
+                        <option value="{{$reading['id']}}">{{$reading['pericope']}}</option>
                     @endforeach
                 </x-input.select>
+                @error('liturgy.1ReadingId')
+                <x-input.error>{{ $message }}</x-input.error>
+                @enderror
             </div>
 
             <div class="col-span-6 sm:col-span-4">
@@ -33,15 +35,117 @@
             </div>
 
             <div class="col-span-6 sm:col-span-4">
-                <x-label>Do not Print</x-label>
-                <x-input.checkbox wire:model="liturgy.1ReadingNoPrint" class="mt-1"></x-input.checkbox>
+                <div class="flex space-x-2 items-center">
+                    <x-label>Do not Print</x-label>
+                    <x-input.checkbox wire:model="liturgy.1ReadingNoPrint"></x-input.checkbox>
+                </div>
             </div>
         </x-slot>
-
     </x-form-section>
 
     <x-section-border/>
 
+    <x-form-section submit="save">
+        <x-slot name="title">
+            Psalm
+        </x-slot>
 
+        <x-slot name="form">
+            <div class="col-span-6 sm:col-span-4">
+                <x-label>Psalm</x-label>
+                <x-input.select class="mt-1" wire:model.lazy="liturgy.PsalmReadingId">
+                    <option value="">Select a Value</option>
+                    @foreach($readings->where('category', 'marriage-psalm')->where('translation_id', '1') as $reading)
+                        <option value="{{$reading['id']}}">{{$reading['pericope']}}</option>
+                    @endforeach
+                </x-input.select>
+                @error('liturgy.PsalmReadingId')
+                <x-input.error>{{ $message }}</x-input.error>
+                @enderror
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <x-label>Lector's Name</x-label>
+                <x-input wire:model.lazy="liturgy.PsalmReadingLector" type="text" class="mt-1 block w-full" />
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <div class="flex space-x-2 items-center">
+                    <x-label>Do not Print</x-label>
+                    <x-input.checkbox wire:model="liturgy.PsalmReadingNoPrint"></x-input.checkbox>
+                </div>
+            </div>
+        </x-slot>
+    </x-form-section>
+
+    <x-section-border/>
+
+    <x-form-section submit="save">
+        <x-slot name="title">
+            Second Reading
+        </x-slot>
+
+        <x-slot name="form">
+            <div class="col-span-6 sm:col-span-4">
+                <x-label>Second Reading</x-label>
+                <x-input.select class="mt-1" wire:model.lazy="liturgy.2ReadingId">
+                    <option value="">Select a Value</option>
+                    @foreach($readings->where('category', 'marriage-2')->where('translation_id', '1') as $reading)
+                        <option value="{{$reading['id']}}">{{$reading['pericope']}}</option>
+                    @endforeach
+                </x-input.select>
+                @error('liturgy.2ReadingId')
+                <x-input.error>{{ $message }}</x-input.error>
+                @enderror
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <x-label>Lector's Name</x-label>
+                <x-input wire:model.lazy="liturgy.2ReadingLector" type="text" class="mt-1 block w-full" />
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <div class="flex space-x-2 items-center">
+                    <x-label>Do not Print</x-label>
+                    <x-input.checkbox wire:model="liturgy.2ReadingNoPrint"></x-input.checkbox>
+                </div>
+            </div>
+        </x-slot>
+    </x-form-section>
+
+    <x-section-border/>
+
+    <x-form-section submit="save">
+        <x-slot name="title">
+            Gospel
+        </x-slot>
+
+        <x-slot name="form">
+            <div class="col-span-6 sm:col-span-4">
+                <x-label>Gospel Reading</x-label>
+                <x-input.select class="mt-1" wire:model.lazy="liturgy.GospelReadingId">
+                    <option value="">Select a Value</option>
+                    @foreach($readings->where('category', 'marriage-gospel')->where('translation_id', '1') as $reading)
+                        <option value="{{$reading['id']}}">{{$reading['pericope']}}</option>
+                    @endforeach
+                </x-input.select>
+                @error('liturgy.GospelReadingId')
+                <x-input.error>{{ $message }}</x-input.error>
+                @enderror
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <x-label>Lector's Name</x-label>
+                <x-input wire:model.lazy="liturgy.GospelReadingLector" type="text" class="mt-1 block w-full" />
+            </div>
+
+            <div class="col-span-6 sm:col-span-4">
+                <div class="flex space-x-2 items-center">
+                    <x-label>Do not Print</x-label>
+                    <x-input.checkbox wire:model="liturgy.GospelReadingNoPrint"></x-input.checkbox>
+                </div>
+            </div>
+        </x-slot>
+    </x-form-section>
 
 </x-layout.page>

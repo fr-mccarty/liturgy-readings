@@ -9,13 +9,31 @@ class Reading extends Component
     public $liturgy;
 
     protected $rules = [
-        'liturgy.1ReadingId' => 'string',
+        'liturgy.1ReadingId' => 'string|exclude_if:liturgy.1ReadingNoPrint,true|required',
         'liturgy.1ReadingLector' => 'string',
         'liturgy.1ReadingNoPrint' => 'boolean',
+        'liturgy.PsalmReadingId' => 'string|exclude_if:liturgy.PsalmReadingNoPrint,true|required',
+        'liturgy.PsalmReadingLector' => 'string',
+        'liturgy.PsalmReadingNoPrint' => 'boolean',
+        'liturgy.2ReadingId' => 'string|exclude_if:liturgy.2ReadingNoPrint,true|required',
+        'liturgy.2ReadingLector' => 'string',
+        'liturgy.2ReadingNoPrint' => 'boolean',
+        'liturgy.GospelReadingId' => 'string|exclude_if:liturgy.GospelReadingNoPrint,true|required',
+        'liturgy.GospelReadingLector' => 'string',
+        'liturgy.GospelReadingNoPrint' => 'boolean',
+    ];
+
+    protected $messages = [
+        'liturgy.1ReadingId' => 'The First Reading Cannot be Empty.',
+        'liturgy.PsalmReadingId' => 'The Psalm Cannot be Empty.',
+        'liturgy.2ReadingId' => 'The Second Reading Cannot be Empty.',
+        'liturgy.GospelReadingId' => 'The Gospel Reading Cannot be Empty.',
     ];
 
     public function print()
     {
+        $this->validate();
+
         session(['liturgy' => $this->liturgy]);
 
         return $this->dispatchBrowserEvent('open-link-in-new-window', ['link' => '/wedding/print/']);
