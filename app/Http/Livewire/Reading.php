@@ -39,10 +39,8 @@ class Reading extends Component
         return $this->dispatchBrowserEvent('open-link-in-new-window', ['link' => '/wedding/print/']);
     }
 
-
-
     public function render()
     {
-        return view('livewire.reading', ['readings' => \App\Helpers\ReadingHelper::getReadings()]);
+        return view('livewire.reading', ['readings' => \App\Helpers\ReadingHelper::getReadings()])->extends('layouts.guest-with-navigation');
     }
 }

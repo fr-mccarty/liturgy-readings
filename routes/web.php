@@ -13,20 +13,20 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', \App\Http\Livewire\Reading::class);
+Route::get('/dashboard', \App\Http\Livewire\Reading::class)->name('dashboard');
+Route::get('wedding-readings', \App\Http\Livewire\Reading::class)->name('wedding');
+Route::get('wedding/print', \App\Http\Livewire\PrintWedding::class);
 
-Route::middleware([
-    'auth:sanctum',
-    config('jetstream.auth_session'),
-    'verified'
-])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
-
-    Route::get('wedding', \App\Http\Livewire\Reading::class)->name('wedding');
-    Route::get('wedding/print', \App\Http\Livewire\PrintWedding::class);
-
-});
+//Route::middleware([
+//    'auth:sanctum',
+//    config('jetstream.auth_session'),
+//    'verified'
+//])->group(function () {
+//    Route::get('/dashboard', function () {
+//        return view('dashboard');
+//    })->name('dashboard');
+//
+//    Route::get('wedding', \App\Http\Livewire\Reading::class)->name('wedding');
+//    Route::get('wedding/print', \App\Http\Livewire\PrintWedding::class);
+//});
