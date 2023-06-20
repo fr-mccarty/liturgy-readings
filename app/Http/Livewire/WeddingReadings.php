@@ -21,6 +21,10 @@ class WeddingReadings extends Component
         'liturgy.GospelReadingId' => 'string|exclude_if:liturgy.GospelReadingNoPrint,true|required',
         'liturgy.GospelReadingLector' => 'string',
         'liturgy.GospelReadingNoPrint' => 'boolean',
+        'liturgy.nameOfSpouse1' => 'string|exclude_if:liturgy.PetitionsNoPrint,true|required',
+        'liturgy.nameOfSpouse2' => 'string|exclude_if:liturgy.PetitionsNoPrint,true|required',
+        'liturgy.PetitionsLector' => 'string',
+        'liturgy.PetitionsNoPrint' => 'boolean',
     ];
 
     protected $messages = [
@@ -28,6 +32,8 @@ class WeddingReadings extends Component
         'liturgy.PsalmReadingId' => 'The Psalm Cannot be Empty.',
         'liturgy.2ReadingId' => 'The Second Reading Cannot be Empty.',
         'liturgy.GospelReadingId' => 'The Gospel Reading Cannot be Empty.',
+        'liturgy.nameOfSpouse1' => 'The Name of Spouse 1 Cannot be Empty.',
+        'liturgy.nameOfSpouse2' => 'The Name of Spouse 2 Cannot be Empty.',
     ];
 
     public function print()

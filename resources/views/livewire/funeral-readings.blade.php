@@ -156,4 +156,48 @@
         </x-slot>
     </x-form-section>
 
+    <x-section-border />
+
+    <x-form-section submit="save">
+        <x-slot name="title">
+            Petitions
+        </x-slot>
+
+        <x-slot name="form">
+            @if(empty($liturgy['PetitionsNoPrint']))
+                <div class="col-span-6 sm:col-span-4">
+                    <x-label>Name of Deceased</x-label>
+                    <x-input wire:model.lazy="liturgy.nameOfDeceased" type="text" class="mt-1 block w-full" />
+                    @error('liturgy.nameOfDeceased')
+                    <x-input.error>{{ $message }}</x-input.error>
+                    @enderror
+                </div>
+
+                <div class="col-span-6 sm:col-span-4">
+                    <x-label>Sex of Deceased</x-label>
+                    <x-input.select class="mt-1" wire:model.lazy="liturgy.sexOfDeceased">
+                        <option value="">Select</option>
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                    </x-input.select>
+                    @error('liturgy.sexOfDeceased')
+                    <x-input.error>{{ $message }}</x-input.error>
+                    @enderror
+                </div>
+
+                <div class="col-span-6 sm:col-span-4">
+                    <x-label>Lector's Name</x-label>
+                    <x-input wire:model.lazy="liturgy.PetitionsLector" type="text" class="mt-1 block w-full" />
+                </div>
+            @endif
+
+            <div class="col-span-6 sm:col-span-4">
+                <div class="flex space-x-2 items-center">
+                    <x-label>Do not Print</x-label>
+                    <x-input.checkbox wire:model="liturgy.PetitionsNoPrint"></x-input.checkbox>
+                </div>
+            </div>
+        </x-slot>
+    </x-form-section>
+
 </x-layout.page>
