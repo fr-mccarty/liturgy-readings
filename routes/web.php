@@ -26,7 +26,7 @@ Route::middleware([
         return view('dashboard');
     })->name('dashboard');
 
-    Route::get('wedding', \App\Http\Livewire\Reading::class);
+    Route::get('wedding', \App\Http\Livewire\Reading::class)->name('wedding');
     Route::get('wedding/print', \App\Http\Livewire\PrintWedding::class);
 
 });
