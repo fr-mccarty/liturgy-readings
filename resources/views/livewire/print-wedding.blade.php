@@ -1,4 +1,4 @@
-<x-print.readings>
+<x-layout.print>
     {{-- Page 1--}}
     @if(empty($liturgy['1ReadingNoPrint']))
     <div class="p-6 break-after-page">
@@ -114,4 +114,4 @@
     </div>
     @endif
 
-</x-print.readings>
+</x-layout.print>

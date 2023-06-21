@@ -42,7 +42,7 @@ class WeddingReadings extends Component
 
         session(['liturgy' => $this->liturgy]);
 
-        return $this->dispatchBrowserEvent('open-link-in-new-window', ['link' => '/wedding/print/']);
+        return $this->dispatchBrowserEvent('open-link-in-new-window', ['link' => route('wedding-readings-print')]);
     }
 
     public function render()

@@ -42,7 +42,7 @@ class FuneralReadings extends Component
 
         session(['liturgy' => $this->liturgy]);
 
-        return $this->dispatchBrowserEvent('open-link-in-new-window', ['link' => '/funeral/print/']);
+        return $this->dispatchBrowserEvent('open-link-in-new-window', ['link' => route('funeral-readings-print')]);
     }
 
     public function render()

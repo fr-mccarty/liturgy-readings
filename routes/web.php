@@ -16,9 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', \App\Http\Livewire\WeddingReadings::class);
 Route::get('/dashboard', \App\Http\Livewire\WeddingReadings::class)->name('dashboard');
 Route::get('wedding-readings', \App\Http\Livewire\WeddingReadings::class)->name('wedding-readings');
-Route::get('wedding/print', \App\Http\Livewire\PrintWedding::class);
+Route::get('wedding-readings/print', \App\Http\Livewire\PrintWedding::class)->name('wedding-readings-print');
 Route::get('funeral-readings', \App\Http\Livewire\FuneralReadings::class)->name('funeral-readings');
-Route::get('funeral/print', \App\Http\Livewire\PrintFuneral::class);
+Route::get('funeral-readings/print', \App\Http\Livewire\PrintFuneral::class)->name('funeral-readings-print');
 
 //Route::middleware([
 //    'auth:sanctum',
