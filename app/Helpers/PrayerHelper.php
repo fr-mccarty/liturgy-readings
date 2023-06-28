@@ -6,7 +6,7 @@ class PrayerHelper
 {
     public static function getPrayers()
     {
-        //types: collect, offerings, preface, nuptial_blessing, after_communion, vows, solemn_blessing,
+        //types: collect, offerings, preface, nuptial_blessing, after_communion, vows, solemn_blessing, commendation, invitation_to_prayer
         //translation_id: 1 => English
         return collect([
 
@@ -20,7 +20,8 @@ class PrayerHelper
                 'translation_id' => 1,
                 'liturgy_type' => 'wedding',
                 'type' => 'collect',
-                'text' => 'The prayer AI may not be used if the first Nuptial Blessing (MI) is selected. O God, who consecrated the bond of Marriage
+                'note' => 'The prayer AI may not be used if the first Nuptial Blessing (MI) is selected.',
+                'text' => 'O God, who consecrated the bond of Marriage
                 by so great a mystery
                 that in the wedding covenant you foreshadow
                 the Sacrament of Christ and his Church, grant, we pray, to these your servants, that what they receive in faith
@@ -155,12 +156,7 @@ class PrayerHelper
                 'translation_id' => 1,
                 'liturgy_type' => 'wedding',
                 'type' => 'preface',
-                'text' => 'V. The Lord be with you.
-                R. And with your spirit.
-                V. Lift up your hearts.
-                R. We lift them up to the Lord.
-                V. Let us give thanks to the Lord our God. R. It is right and just.
-                It is truly right and just, our duty and our salvation, always and everywhere to give you thanks,
+                'text' => 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks,
                 Lord, holy Father, almighty and eternal God.
                 For you have forged the covenant of Marriage as a sweet yoke of harmony
                 and an unbreakable bond of peace,
@@ -183,12 +179,7 @@ class PrayerHelper
                 'translation_id' => 1,
                 'liturgy_type' => 'wedding',
                 'type' => 'preface',
-                'text' => 'V. The Lord be with you.
-                R. And with your spirit.
-                V. Lift up your hearts.
-                R. We lift them up to the Lord.
-                V. Let us give thanks to the Lord our God. R. It is right and just.
-                It is truly right and just, our duty and our salvation, always and everywhere to give you thanks.
+                'text' => 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks.
                 Lord, holy Father, almighty and eternal God, through Christ our Lord.
                 For in him you have made a new covenant with your people, so that, as you have redeemed man and woman
                 by the mystery of Christ’s Death and Resurrection,
@@ -207,12 +198,7 @@ class PrayerHelper
                 'translation_id' => 1,
                 'liturgy_type' => 'wedding',
                 'type' => 'preface',
-                'text' => 'V. The Lord be with you.
-                R. And with your spirit.
-                V. Lift up your hearts.
-                R. We lift them up to the Lord.
-                V. Let us give thanks to the Lord our God. R. It is right and just.
-                It is truly right and just, our duty and our salvation, always and everywhere to give you thanks,
+                'text' => 'It is truly right and just, our duty and our salvation, always and everywhere to give you thanks,
                 Lord, holy Father, almighty and eternal God.
                 For you willed that the human race,
                 created by the gift of your goodness,
@@ -232,7 +218,7 @@ class PrayerHelper
                 'alt_id' => 'M1',
                 'translation_id' => 1,
                 'liturgy_type' => 'wedding',
-                'type' => 'preface',
+                'type' => 'nuptial_blessing',
                 'text' => 'O God, who by your mighty power
                 created all things out of nothing,
                 and, when you had set in place
@@ -277,7 +263,7 @@ class PrayerHelper
                 'alt_id' => 'M2',
                 'translation_id' => 1,
                 'liturgy_type' => 'wedding',
-                'type' => 'preface',
+                'type' => 'nuptial_blessing',
                 'text' => 'Holy Father,
                 who formed man in your own image,
                 male and female you created them,
@@ -316,7 +302,7 @@ class PrayerHelper
                 'alt_id' => 'M3',
                 'translation_id' => 1,
                 'liturgy_type' => 'wedding',
-                'type' => 'preface',
+                'type' => 'nuptial_blessing',
                 'text' => 'Holy Father, maker of the whole world,
                 who created man and woman in your own image
                 and willed that their union be crowned with your blessing, we humbly beseech you for these your servants,
