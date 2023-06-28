@@ -8,7 +8,7 @@
             <div class="text-right text-xl text-red-500 font-bold">{{$liturgy['1ReadingLector']}}</div>
         @endif
         <div class="mt-3 font-semibold">{{$readings->where('id', $liturgy['1ReadingId'])->first()['introduction']}}</div>
-        <p class="mt-3">{!! $readings->where('id', $liturgy['1ReadingId'])->first()['reading']  !!}</p>
+        <p class="mt-3 whitespace-pre-line">{!! $readings->where('id', $liturgy['1ReadingId'])->first()['reading']  !!}</p>
         <div class="mt-3 font-semibold">{{$readings->where('id', $liturgy['1ReadingId'])->first()['conclusion']}}</div>
     </div>
     @endif
@@ -36,7 +36,7 @@
             <div class="text-right text-xl text-red-500 font-bold">{{$liturgy['2ReadingLector']}}</div>
         @endif
         <div class="mt-3 font-semibold">{{$readings->where('id', $liturgy['2ReadingId'])->first()['introduction']}}</div>
-        <p class="mt-3">{!! $readings->where('id', $liturgy['2ReadingId'])->first()['reading']  !!}</p>
+        <p class="mt-3 whitespace-pre-line">{!! $readings->where('id', $liturgy['2ReadingId'])->first()['reading']  !!}</p>
         <div class="mt-3 font-semibold">{{$readings->where('id', $liturgy['2ReadingId'])->first()['conclusion']}}</div>
     </div>
     @endif
@@ -50,7 +50,7 @@
             <div class="text-right text-xl text-red-500 font-bold">{{$liturgy['GospelReadingLector']}}</div>
         @endif
         <div class="mt-3 font-semibold">{{$readings->where('id', $liturgy['GospelReadingId'])->first()['introduction']}}</div>
-        <p class="mt-3">{!! $readings->where('id', $liturgy['GospelReadingId'])->first()['reading']  !!}</p>
+        <p class="mt-3 whitespace-pre-line">{!! $readings->where('id', $liturgy['GospelReadingId'])->first()['reading']  !!}</p>
         <div class="mt-3 font-semibold">{{$readings->where('id', $liturgy['GospelReadingId'])->first()['conclusion']}}</div>
     </div>
     @endif
