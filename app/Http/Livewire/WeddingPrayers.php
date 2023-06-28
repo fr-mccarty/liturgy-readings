@@ -29,7 +29,7 @@ class WeddingPrayers extends Component
         'liturgy.prefaceId' => 'The Preface Cannot be Empty.',
         'liturgy.nuptialBlessingId' => 'The Nuptial Blessing Cannot be Empty.',
         'liturgy.afterCommunionId' => 'The Prayer After Communion cannot be Empty.',
-        'liturgy.afterCommunionId' => 'The Solemn Blessing Cannot be Empty.',
+        'liturgy.solemnBlessingId' => 'The Solemn Blessing Cannot be Empty.',
     ];
 
     public function print()

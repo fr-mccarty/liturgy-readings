@@ -167,10 +167,7 @@ class PrayerHelper
                 that, while the birth of children brings beauty to the world, their rebirth in Baptism gives increase to the Church, through Christ our Lord.
                 Through him, with the Angels and all the Saints, we sing the hymn of your praise,
                 as without end we acclaim:
-                Holy, Holy, Holy Lord God of hosts.
-                Heaven and earth are full of your glory.
-                Hosanna in the highest.
-                Blessed is he who comes in the name of the Lord. Hosanna in the highest.',
+                Holy, Holy, Holy...',
             ],
             [
                 'id' => 111,
@@ -189,7 +186,7 @@ class PrayerHelper
                 might draw us back more deeply
                 into the wondrous design of your love.
                 And so, with the Angels and all the Saints, we praise you, and without end we acclaim:
-                Holy, Holy, Holy Lord God of hosts ...',
+                Holy, Holy, Holy...',
             ],
             [
                 'id' => 112,
@@ -210,7 +207,7 @@ class PrayerHelper
                 And so, the Sacrament of holy Matrimony, as the abiding sign of your own love, consecrates the love of man and woman, through Christ our Lord.
                 Through him, with the Angels and all the Saints, we sing the hymn of your praise,
                 as without end we acclaim:
-                Holy, Holy, Holy Lord God of hosts ...',
+                Holy, Holy, Holy...',
             ],
             [
                 'id' => 120,
@@ -1240,7 +1237,7 @@ class PrayerHelper
                 'alt_id' => 'J1',
                 'translation_id' => 1,
                 'liturgy_type' => 'funeral',
-                'type' => 'prayer_over_gifts',
+                'type' => 'offerings',
                 'for' => 'Outside the Easter Season',
                 'text' => 'Lord,
                 receive the gifts we offer
@@ -1256,7 +1253,7 @@ class PrayerHelper
                 'alt_id' => 'J2',
                 'translation_id' => 1,
                 'liturgy_type' => 'funeral',
-                'type' => 'prayer_over_gifts',
+                'type' => 'offerings',
                 'for' => '',
                 'text' => 'Lord,
                 accept this sacrifice we offer for our brother (sister) N. on the day of his (her) burial.
@@ -1272,7 +1269,7 @@ class PrayerHelper
                 'alt_id' => 'J3',
                 'translation_id' => 1,
                 'liturgy_type' => 'funeral',
-                'type' => 'prayer_over_gifts',
+                'type' => 'offerings',
                 'for' => 'During the Easter Season',
                 'text' => 'Lord,
                 we are united in this sacrament by the love of Jesus Christ. Accept these gifts
@@ -1286,7 +1283,7 @@ class PrayerHelper
                 'alt_id' => 'J4',
                 'translation_id' => 1,
                 'liturgy_type' => 'funeral',
-                'type' => 'prayer_over_gifts',
+                'type' => 'offerings',
                 'for' => 'Another Prayer',
                 'text' => 'All-powerful Father,
                 may this sacrifice wash away
@@ -1451,7 +1448,7 @@ class PrayerHelper
                 'alt_id' => 'O1',
                 'translation_id' => 1,
                 'liturgy_type' => 'funeral',
-                'type' => 'final_commendation',
+                'type' => 'invitation_to_prayer',
                 'for' => '',
                 'text' => 'Before we go our separate ways, let us take leave of our brother/sister. May our farewell express our affection for him/her; may it ease our sadness and strengthen our hope. One day we shall joyfully greet him/her again when the love of Christ, which conquers all things, destroys even death itself.',
             ],
@@ -1461,7 +1458,7 @@ class PrayerHelper
                 'alt_id' => 'O2',
                 'translation_id' => 1,
                 'liturgy_type' => 'funeral',
-                'type' => 'final_commendation',
+                'type' => 'invitation_to_prayer',
                 'for' => '',
                 'text' => 'Trusting in God, we have prayed together for N. and now we come to the last farewell. There is sadness in parting, but we take comfort in the hope that one day we shall see N. again and enjoy his/her friendship. Although this congregation will disperse in sorrow, the mercy of God will gather us together again in the joy of his kingdom. Therefore let us console one another in the faith of Jesus Christ.',
             ],
@@ -1471,7 +1468,7 @@ class PrayerHelper
                 'alt_id' => 'O3',
                 'translation_id' => 1,
                 'liturgy_type' => 'funeral',
-                'type' => 'final_commendation',
+                'type' => 'invitation_to_prayer',
                 'for' => '',
                 'text' => 'With faith in Jesus Christ, we must reverently bury the body of our brother/sister.
                 Let us pray with confidence to God, in whose sight all creation lives, that he will raise up in holiness and power the mortal body of our brother/sister and command his/her soul to be numbered among the blessed.
@@ -1483,7 +1480,7 @@ class PrayerHelper
                 'alt_id' => 'O4',
                 'translation_id' => 1,
                 'liturgy_type' => 'funeral',
-                'type' => 'final_commendation',
+                'type' => 'invitation_to_prayer',
                 'for' => '',
                 'text' => 'Our brother/sister N. has fallen asleep in Christ. Confident in our hope of eternal life, let us commend him/her to the loving mercy of our Father and let our prayers go with him/her. He/she was adopted as God’s son/daughter in baptism and was nourished at the table of the Lord; may he/she now inherit the promise of eternal life and take his/her place at the table of God’s children in heaven.
                 Let us pray also on our own behalf, that we who now mourn and are saddened may one day go forth with our brother/sister to meet the Lord of life when he appears in glory.',
@@ -1494,7 +1491,7 @@ class PrayerHelper
                 'alt_id' => 'O5',
                 'translation_id' => 1,
                 'liturgy_type' => 'funeral',
-                'type' => 'final_commendation',
+                'type' => 'invitation_to_prayer',
                 'for' => '',
                 'text' => 'Because God has chosen to call our brother/sister N. from this life to himself,
                 we commit his/her body to the earth,
@@ -1510,7 +1507,7 @@ class PrayerHelper
                 'alt_id' => 'O6',
                 'translation_id' => 1,
                 'liturgy_type' => 'funeral',
-                'type' => 'final_commendation',
+                'type' => 'invitation_to_prayer',
                 'for' => '',
                 'text' => 'Before we go our separate ways, let us take leave of our brother/sister. May our farewell express our affection for him/her; may it ease our sadness and strengthen our hope. One day we shall joyfully greet him/her again when the love of Christ, which con- quers all things, destroys even death itself.',
             ],
@@ -1520,7 +1517,7 @@ class PrayerHelper
                 'alt_id' => 'O7',
                 'translation_id' => 1,
                 'liturgy_type' => 'funeral',
-                'type' => 'final_commendation',
+                'type' => 'invitation_to_prayer',
                 'for' => '',
                 'text' => 'Trusting in God, we have prayed together for N. and now we come to the last farewell. There is sadness in parting, but we take comfort in the hope that one day we shall see N. again and enjoy his/her friendship. Although this congregation will disperse in sorrow, the mercy of God will gather us together again in the joy of the kingdom. Therefore let us console one another in the faith of Jesus Christ.',
             ],
