@@ -2,6 +2,7 @@
 
 namespace App\Http\Livewire;
 
+use App\Helpers\LogPrintHelper;
 use Livewire\Component;
 
 class WeddingReadings extends Component
@@ -39,6 +40,8 @@ class WeddingReadings extends Component
     public function print()
     {
         $this->validate();
+
+        LogPrintHelper::logPrint($this->liturgy);
 
         session(['liturgy' => $this->liturgy]);
 
